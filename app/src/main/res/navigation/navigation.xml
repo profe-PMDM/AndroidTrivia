@@ -29,7 +29,11 @@
         android:id="@+id/gameOverFragment"
         android:name="com.example.android.navigation.GameOverFragment"
         android:label="@string/fragment_game_over"
-        tools:layout="@layout/fragment_game_over" />
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
         android:name="com.example.android.navigation.GameWonFragment"
@@ -41,6 +45,9 @@
         <argument
             android:name="numCorrect"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
